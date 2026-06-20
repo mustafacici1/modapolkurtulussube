@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>İletişim - MODAPOL Ağız ve Diş Sağlığı Polikliniği</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(10, 61, 98, 0.05);
+        }
+
+        .ambient-shadow {
+            box-shadow: 0 20px 40px -10px rgba(10, 61, 98, 0.06);
+        }
+
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: skewX(-20deg);
+            animation: shimmer 3s infinite;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#3c494a",
+                        "primary-container": "#0bb8c4",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#001d34",
+                        "surface-container": "#e5eeff",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "outline": "#6c7a7b",
+                        "surface": "#f8f9ff",
+                        "surface-variant": "#d3e4fe",
+                        "tertiary": "#5c5f60",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#aad3ff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-tint": "#006970",
+                        "inverse-primary": "#4cd9e5",
+                        "on-secondary-fixed-variant": "#1d496f",
+                        "primary-fixed": "#7ff4ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#3a3d3e",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#004f55",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#bbc9ca",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#004348",
+                        "secondary-fixed-dim": "#a2caf7",
+                        "secondary": "#386188",
+                        "inverse-surface": "#213145",
+                        "inverse-on-surface": "#eaf1ff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#191c1d",
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-surface": "#0b1c30",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#cfe5ff",
+                        "tertiary-container": "#a5a7a8",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#002022",
+                        "primary-fixed-dim": "#4cd9e5",
+                        "surface-container-low": "#eff4ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-secondary-container": "#315b81",
+                        "primary": "#006970",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-background": "#0b1c30"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    },
+                    "keyframes": {
+                        "float": {
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-20px)" }
+                        },
+                        "blob": {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" }
+                        },
+                        "shimmer": {
+                            "100%": { transform: "translateX(100%)" }
+                        }
+                    },
+                    "animation": {
+                        "float": "float 6s ease-in-out infinite",
+                        "float-delayed": "float 6s ease-in-out 3s infinite",
+                        "blob": "blob 7s infinite",
+                        "shimmer": "shimmer 2s infinite"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background font-body-lg antialiased">
+    <!-- TopNavBar -->
+    <nav class="bg-white/70 backdrop-blur-md docked full-width top-0 sticky border-b border-white/20 shadow-sm fixed w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20 transition-all duration-300"
+        id="main-nav">
+        <div class="flex items-center gap-4">
+            <a class="font-headline-md text-headline-md font-bold text-on-surface" href="index.html">MODAPOL</a>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+                href="index.html">Anasayfa</a>
+            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+                href="tedaviler.html">Tedaviler</a>
+            <a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1 opacity-80 transition-opacity"
+                href="contact.html">İletişim</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="#randevu-formu"
+                class="bg-secondary text-on-secondary px-8 py-3 rounded-full hover:bg-secondary/90 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/30 hover:-translate-y-0.5 active:translate-y-0 btn-shimmer hidden md:block">
+                Randevu Al
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <button aria-label="Menüyü aç/kapat" class="md:hidden text-primary p-2" id="mobile-menu-btn">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile Menu Overlay (Hidden by default) -->
+    <div class="fixed inset-0 bg-surface z-40 hidden flex-col pt-24 px-margin-mobile" id="mobile-menu">
+        <div class="flex flex-col gap-6 items-start">
+            <a class="font-headline-md text-headline-md text-on-surface-variant" href="index.html">Anasayfa</a>
+            <a class="font-headline-md text-headline-md text-on-surface-variant" href="tedaviler.html">Tedaviler</a>
+            <a class="font-headline-md text-headline-md text-primary font-bold" href="contact.html">İletişim</a>
+            <a href="#randevu-formu" id="mobile-randevu-btn"
+                class="mt-8 w-full text-center bg-secondary text-on-secondary font-label-sm text-label-sm px-8 py-4 rounded-xl">
+                Randevu Al
+            </a>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <main class="w-full">
+        <!-- Hero Section -->
+        <section
+            class="w-full py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-surface-variant/30 to-surface-bright/80 -z-10 rounded-3xl">
+            </div>
+            <div
+                class="absolute top-10 right-20 w-64 h-64 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
+            </div>
+            <div class="absolute -bottom-10 left-20 w-64 h-64 bg-secondary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"
+                style="animation-delay: 2s;"></div>
+
+            <div class="text-center max-w-3xl mx-auto mb-16 relative z-10">
+                <h1
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
+                    Mükemmel Gülüşünüzü Birlikte Yaratalım</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Tedavilerimiz, kliniğimiz veya randevu
+                    almak ile ilgili her türlü sorunuzu yanıtlamak için buradayız.</p>
+            </div>
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <!-- Contact Details & Map (Left Column) -->
+                <div class="lg:col-span-5 space-y-gutter">
+                    <!-- Clinic Info Card -->
+                    <div
+                        class="glass-panel p-8 md:p-12 rounded-[32px] ambient-shadow relative overflow-hidden border border-outline-variant/30">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-primary-container/10 rounded-full blur-3xl">
+                        </div>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-8">İletişim Bilgileri</h2>
+                        <div class="space-y-8">
+                            <!-- Address -->
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="bg-surface-container w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-primary">
+                                    <span class="material-symbols-outlined" data-icon="location_on" data-weight="fill"
+                                        style="font-variation-settings: 'FILL' 1;">location_on</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-label-sm text-label-sm text-secondary mb-1">Klinik Adresi</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                        Kurtuluş, Cumhuriyet Blv. No:45/B<br />
+                                        26090 Odunpazarı / Eskişehir
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="bg-surface-container w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-primary">
+                                    <span class="material-symbols-outlined" data-icon="call" data-weight="fill"
+                                        style="font-variation-settings: 'FILL' 1;">call</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-label-sm text-label-sm text-secondary mb-1">Telefon Numarası</h3>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">0546 806 22 48</p>
+                                </div>
+                            </div>
+                            <!-- Hours -->
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="bg-surface-container w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-primary">
+                                    <span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+                                </div>
+                                <div class="w-full">
+                                    <h3 class="font-label-sm text-label-sm text-secondary mb-2">Çalışma Saatleri</h3>
+                                    <ul class="font-body-md text-body-md text-on-surface-variant space-y-2">
+                                        <li class="flex justify-between border-b border-outline-variant/20 pb-1">
+                                            <span>Pzt - Cum:</span> <span>09:00 - 18:00</span>
+                                        </li>
+                                        <li class="flex justify-between border-b border-outline-variant/20 pb-1">
+                                            <span>Cumartesi:</span> <span>09:00 - 14:00</span>
+                                        </li>
+                                        <li class="flex justify-between text-tertiary"><span>Pazar:</span>
+                                            <span>Kapalı</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                            <a href="tel:+905468062248"
+                                class="flex-1 bg-surface-container text-primary font-label-sm text-label-sm py-3 px-6 rounded-[16px] hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-lg"
+                                    data-icon="phone_in_talk">phone_in_talk</span>
+                                Kliniği Ara
+                            </a>
+                            <a href="https://wa.me/+905468062248" target="_blank"
+                                class="flex-1 bg-[#25D366]/10 text-[#075E54] font-label-sm text-label-sm py-3 px-6 rounded-[16px] hover:bg-[#25D366]/20 transition-colors flex items-center justify-center gap-2 border border-[#25D366]/30">
+                                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z">
+                                    </path>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Google Maps Embed -->
+                    <div
+                        class="h-64 rounded-[32px] overflow-hidden border border-outline-variant/30 ambient-shadow relative bg-surface-container-low group">
+                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"
+                            src="https://maps.google.com/maps?q=Kurtulu%C5%9F,%20Cumhuriyet%20Blv.%20No%3A45%2FB,%2026090%20Odunpazar%C4%B1%2FEski%C5%9Fehir&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+                            title="Klinik Lokasyonu" aria-label="Klinik Lokasyonu Google Haritalar">
+                        </iframe>
+                    </div>
+                </div>
+                <!-- Appointment Form (Right Column) -->
+                <div class="lg:col-span-7" id="randevu-formu">
+                    <div
+                        class="bg-white p-8 md:p-12 rounded-[32px] ambient-shadow border border-outline-variant/20 h-full hover:shadow-2xl hover:shadow-primary/5 transition-shadow duration-500">
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-2">Randevu Talep Edin</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-8">Aşağıdaki formu doldurun,
+                            ziyaretinizi onaylamak için ekibimiz sizinle en kısa sürede iletişime geçecektir.</p>
+                        <form class="space-y-6" id="appointment-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Name -->
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm text-secondary block" for="name">Ad
+                                        Soyad</label>
+                                    <input id="name" required
+                                        class="w-full bg-surface text-on-surface font-body-md rounded-xl border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 px-4 py-3 transition-all outline-none"
+                                        placeholder="Ahmet Yılmaz" type="text" />
+                                </div>
+                                <!-- Phone -->
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm text-secondary block" for="phone">Telefon
+                                        Numarası</label>
+                                    <input id="phone" required
+                                        class="w-full bg-surface text-on-surface font-body-md rounded-xl border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 px-4 py-3 transition-all outline-none"
+                                        placeholder="0555 555 55 55" type="tel" />
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm text-secondary block" for="email">E-posta
+                                    Adresi</label>
+                                <input id="email"
+                                    class="w-full bg-surface text-on-surface font-body-md rounded-xl border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 px-4 py-3 transition-all outline-none"
+                                    placeholder="ahmet@ornek.com" type="email" />
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Date -->
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm text-secondary block" for="date">Tercih
+                                        Edilen Tarih</label>
+                                    <div class="relative">
+                                        <input id="date"
+                                            class="w-full bg-surface text-on-surface font-body-md rounded-xl border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 px-4 py-3 transition-all text-on-surface-variant outline-none"
+                                            type="date" />
+                                    </div>
+                                </div>
+                                <!-- Treatment Type -->
+                                <div class="space-y-2">
+                                    <label class="font-label-sm text-label-sm text-secondary block"
+                                        for="treatment">İlgilendiğiniz Tedavi</label>
+                                    <select id="treatment"
+                                        class="w-full bg-surface text-on-surface font-body-md rounded-xl border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 px-4 py-3 transition-all text-on-surface-variant outline-none">
+                                        <option disabled="" selected="" value="">Bir tedavi seçin</option>
+                                        <option value="Diş İmplantı">Diş İmplantı</option>
+                                        <option value="Estetik Diş Hekimliği">Estetik Diş Hekimliği</option>
+                                        <option value="Ortodonti">Ortodonti</option>
+                                        <option value="Genel Kontrol">Genel Kontrol</option>
+                                        <option value="Diğer / Emin Değilim">Diğer / Emin Değilim</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Message -->
+                            <div class="space-y-2">
+                                <label class="font-label-sm text-label-sm text-secondary block" for="message">Ek Notlar
+                                    / Mesajınız</label>
+                                <textarea id="message"
+                                    class="w-full bg-surface text-on-surface font-body-md rounded-xl border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 px-4 py-3 transition-all outline-none resize-none"
+                                    placeholder="Diş ile ilgili endişelerinizi veya özel isteklerinizi kısaca açıklayın..."
+                                    rows="4"></textarea>
+                            </div>
+                            <!-- Submit -->
+                            <div class="pt-4">
+                                <button onclick="sendWhatsAppMessage(event)"
+                                    class="w-full bg-gradient-to-r from-primary to-primary-container hover:from-primary-container hover:to-primary text-on-primary font-headline-md text-headline-md py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 flex justify-center items-center gap-2 btn-shimmer"
+                                    type="button">
+                                    <span>Randevu Al</span>
+                                    <span class="material-symbols-outlined"
+                                        data-icon="arrow_forward">arrow_forward</span>
+                                </button>
+                                <p class="text-center font-label-sm text-label-sm text-tertiary mt-4">WhatsApp üzerinden
+                                    hızlıca iletişime geçin.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest full-width">
+        <div
+            class="w-full py-section-padding px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto border-t border-surface-container-low">
+            <!-- Brand & Copyright -->
+            <div class="space-y-4">
+                <div class="font-headline-md text-headline-md text-primary">
+                    MODAPOL Ağız ve Diş Sağlığı Polikliniği
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    © 2024 MODAPOL Ağız ve Diş Sağlığı Polikliniği. Tüm hakları saklıdır.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div class="space-y-4">
+                <h4 class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-4">Hızlı Linkler</h4>
+                <ul class="space-y-3">
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-all"
+                            href="tedaviler.html">Tedaviler</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-all"
+                            href="#">Hasta Yorumları</a></li>
+                    <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-all"
+                            href="#">Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="space-y-4">
+                <h4 class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-4">İletişim Bilgileri
+                </h4>
+                <ul class="space-y-3">
+                    <li class="font-body-md text-body-md text-on-surface-variant flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1"
+                            data-icon="location_on">location_on</span>
+                        Selçukbey Mahallesi Selçuk Bey Caddesi No:65/A Yıldırım / Bursa
+                    </li>
+                    <li class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm" data-icon="call">call</span>
+                        0533 297 16 00
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const date = document.getElementById('date').value.trim();
+            const treatment = document.getElementById('treatment').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone) {
+                alert('Lütfen Ad Soyad ve Telefon Numarası alanlarını doldurunuz.');
+                return;
+            }
+
+            let text = `Merhaba, randevu almak istiyorum.\n\n*Ad Soyad:* ${name}\n*Telefon:* ${phone}`;
+
+            if (email) text += `\n*E-posta:* ${email}`;
+            if (date) text += `\n*Tarih:* ${date}`;
+            if (treatment) text += `\n*Tedavi:* ${treatment}`;
+            if (message) text += `\n*Mesaj:* ${message}`;
+
+            const encodedText = encodeURIComponent(text);
+            const whatsappNumber = "9+905468062248"; // Specified number
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let menuOpen = false;
+
+            mobileBtn.addEventListener('click', () => {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close mobile menu on link click
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    document.body.style.overflow = '';
+                    menuOpen = false;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
